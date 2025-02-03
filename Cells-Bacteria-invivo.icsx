@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bpCommandSequence description="" LibraryPath="" LibraryName="">
+<bpIpCommandBackgroundSubtraction actorname="" actorid="0" sigma="50.000" channels="on off "/>
+<bpIpBaselineCommand actorname="" actorid="0" baseline="0 80.000" channels="off on "/>
+<bpCommandCreateCells actorname="bpImarisApplication" actorid="1" scenefile="" statisticsfile="" statisticswriter="bpStatisticsWriterExcelXls" StoreProcessedImage="false">
+
+
+<bpCellsCreationParameters mFormatVersion="10.0" mSourceImageIndex="0" mEnableRegionOfInterest="false" mProcessEntireImage="false" mCellType="eCellMembrane" mEnableNucleusDetection="false" mSplitCellsOption="eNoSplit" mSplitCellsByMasksOption="eVoronoi" mCellOption="eExpandBody" mCellBodyFillHoles="true" mNucleusFillHoles="true" mSplitNucleiBySeeds="false" mNucleiSeedsEstimatedDiameter="2.65001" mNucleiSeedsBackgroundSubtraction="true" mCellSeedsEstimatedDiameter="2.65001" mCellSeedsBackgroundSubtraction="true" mEnableVesicleDetection="true" mEnableVesicleTracking="false" mVesicleTrackingMaxDist="1" mTrackingGapsClose="true" mTrackingGapsSize="3" mTrackingGapsFill="true" mCellMembraneFilterOption="eLocalContrast" mCellMembraneSmoothFilterWidthSmallest="0.530001" mCellMembraneMergeAutomaticThreshold="true" mCellMembraneMergeManualThreshold="0.571777" mCellMembraneMergeIntensityAutomaticThreshold="true" mCellMembraneMergeIntensityManualThreshold="75.624">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<bpRegionOfInterestContainer>
+</bpRegionOfInterestContainer><mCellBodyDetection mSourceChannelIndex="1" mSmoothEnable="true" mSmoothFilterWidth="5.30001" mLocalContrastEnable="false" mLocalContrastFilterWidth="1.06" mAutomaticThreshold="true" mManualThreshold="200" mEnableTracking="false" mFilterWidthManual="true"/><mNucleusDetection mSourceChannelIndex="1" mSmoothEnable="true" mSmoothFilterWidth="0.265001" mLocalContrastEnable="false" mLocalContrastFilterWidth="1.06" mAutomaticThreshold="true" mManualThreshold="200" mEnableTracking="false" mFilterWidthManual="false"/><mNucleiSeedsFilter>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  
+<bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/></bpStatisticsFilter></mNucleiSeedsFilter><mCellSeedsFilter>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  
+<bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/></bpStatisticsFilter></mCellSeedsFilter><cCVesicleCreationParameters0 mVesicleChannelIndex="0" mVesicleEstimatedDiameter="1.5" mVesicleBackgroundSubtraction="true" mTypeName="Single bacteria" mEnableRegionGrowing="true" mRegionGrowingType="eLocalContrast" mRegionGrowingAutomaticThreshold="false" mRegionGrowingManualThreshold="200" mRegionGrowingDiameter="eDiameterFromVolume" mCreateRegionChannel="false">
+
+<bpStatisticsFilterContainer>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="200" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1.13042e+06" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="200.000" mInitManualThresholdToAuto="false">
+  
+<bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/></bpStatisticsFilter></bpStatisticsFilterContainer></cCVesicleCreationParameters0><cCVesicleCreationParameters1 mVesicleChannelIndex="0" mVesicleEstimatedDiameter="6" mVesicleBackgroundSubtraction="true" mTypeName="Aggregates" mEnableRegionGrowing="true" mRegionGrowingType="eLocalContrast" mRegionGrowingAutomaticThreshold="false" mRegionGrowingManualThreshold="500" mRegionGrowingDiameter="eDiameterFromVolume" mCreateRegionChannel="false">
+
+<bpStatisticsFilterContainer>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="120" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1.13042e+06" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="120.000" mInitManualThresholdToAuto="false">
+  
+<bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/></bpStatisticsFilter></bpStatisticsFilterContainer></cCVesicleCreationParameters1><cCVesicleTrackParameters0>
+
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/></bpObjectTrackingAlgorithmParameters></cCVesicleTrackParameters0><cCVesicleTrackParameters1>
+
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/></bpObjectTrackingAlgorithmParameters></cCVesicleTrackParameters1><mFilter>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="500" mUpperThresholdEnable="true" mUpperThresholdManual="true" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="11300" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="500.000" mInitManualThresholdToAuto="false">
+  
+<bpStatisticsValueType mName="Cell Volume" mUnit="um^3" mFactors="0"/></bpStatisticsFilter></mFilter><mTrackFilter>
+</mTrackFilter><mFilterNucleus>
+
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="10" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="10.000" mInitManualThresholdToAuto="false">
+  
+<bpStatisticsValueType mName="Nucleus Number of Voxels" mUnit="" mFactors="0"/></bpStatisticsFilter></mFilterNucleus><mCellTrackingAlgorithmParameters>
+
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/></bpObjectTrackingAlgorithmParameters></mCellTrackingAlgorithmParameters><mNucleusTrackingAlgorithmParameters>
+
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/></bpObjectTrackingAlgorithmParameters></mNucleusTrackingAlgorithmParameters><mCellTrackFilter>
+</mCellTrackFilter><mNucleusAndVesicleTrackFilter>
+</mNucleusAndVesicleTrackFilter></bpCellsCreationParameters><Scene>
+<bpCellsViewer>
+
+
+
+
+  
+  
+<bpSurfaceComponent>
+  
+  
+  
+  
+  
+  
+<name>Cells 1</name><id>37</id><isHidden>false</isHidden><isNode>false</isNode><isExpanded>false</isExpanded><material>
+    
+    
+    
+    
+    
+    
+  <ambientColor>((0.200,0.200,0.200))</ambientColor><diffuseColor>((1.000,1.000,1.000))</diffuseColor><specularColor>((0.000,0.000,0.000))</specularColor><emissiveColor>((0.000,0.000,0.000))</emissiveColor><shininess>(0.200)</shininess><transparency>(0.000)</transparency></material></bpSurfaceComponent><bpGraphViewerState mSelectedObjectTypeIndex="0" mLayoutDirection="Vertical" mRenderingStyle="Normal" mShowObjects="true" mShowLabels="false"/><bpCellsProperties mDataSetVisible="true">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<mCellBodyProperties mColorCoding="eObjectID" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 0 0" mMaterialPresetName="Phong_Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="true" mSlicerPoint="105.868 105.868 -1065.880" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="21.2001" mSlicerRenderMode="eRenderModeColoredBorderWithShading" mImageId="0" mVisible="true" mVolumeMode="eMasksStyleVolume" mStyle="eMasksStyleVolume" mColor="1 0 0" mSlicerStyle="eMasksSlicerStyleColorOverlay" mSlicerPosition="-1" mObliqueSlicerTranslation="(0.000, 0.000, 0.000)" mObliqueSlicerRotation="(0.000, 0.000, 1.000, 0.000)" mSlicerBorderStyle="eMasksBorderStyleColor" mSlicerBorderWidth="1">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></mCellBodyProperties><mNucleusProperties mColorCoding="eObjectID" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 0 0" mMaterialPresetName="Phong_Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="true" mSlicerPoint="105.868 105.868 -1065.880" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="21.2001" mSlicerRenderMode="eRenderModeColoredBorderWithShading" mImageId="0" mVisible="true" mVolumeMode="eMasksStyleVolume" mStyle="eMasksStyleVolume" mColor="1 0 0" mSlicerStyle="eMasksSlicerStyleColorOverlay" mSlicerPosition="-1" mObliqueSlicerTranslation="(0.000, 0.000, 0.000)" mObliqueSlicerRotation="(0.000, 0.000, 1.000, 0.000)" mSlicerBorderStyle="eMasksBorderStyleColor" mSlicerBorderWidth="1">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></mNucleusProperties><mCellBodyTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="1 1 1" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mCellBodyTracksProperties><mNucleusTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mNucleusTracksProperties><Vesicles mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0 1 0" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="true" mSlicerPoint="105.868 105.868 -1065.880" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="21.2001" mSlicerRenderMode="eRenderModeColoredBorderWithShading" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles><mVesicleTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties><Vesicles1 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0 1 0" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="true" mSlicerPoint="105.868 105.868 -1065.880" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="21.2001" mSlicerRenderMode="eRenderModeColoredBorderWithShading" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles1><mVesicleTracksProperties1 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties1><Vesicles2 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles2><mVesicleTracksProperties2 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties2><Vesicles3 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles3><mVesicleTracksProperties3 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties3><Vesicles4 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles4><mVesicleTracksProperties4 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties4><Vesicles5 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles5><mVesicleTracksProperties5 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties5><Vesicles6 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles6><mVesicleTracksProperties6 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties6><Vesicles7 mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/></Vesicles7><mVesicleTracksProperties7 mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.000 0.000 0.000" mSlicerNormal="0.000 0.000 1.000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+
+
+
+
+
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorCodingColorTable/><mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mTracksDirectPathMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/><mColorMappingTable/></mVesicleTracksProperties7></bpCellsProperties><bpROIProperties mVolumeRenderingMode="MaxIntensityProjection" mBorderWidth="0.000 0.000 0.000"/><bpCellsId Value="0"/></bpCellsViewer></Scene></bpCommandCreateCells>
+</bpCommandSequence>

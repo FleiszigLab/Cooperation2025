@@ -1,0 +1,213 @@
+Format Version: 10.0
+Source Image Index: 0
+Enable Region Of Interest: false
+Process Entire Image: false
+Cell Type: eCellMembrane
+Enable Nucleus Detection: false
+Split Cells Option: eNoSplit
+Split Cells By Masks Option: eVoronoi
+Cell Option: eExpandBody
+Cell Body Fill Holes: true
+Nucleus Fill Holes: true
+Split Nuclei By Seeds: false
+Nuclei Seeds Estimated Diameter: 2.65001
+Nuclei Seeds Background Subtraction: true
+Cell Seeds Estimated Diameter: 2.65001
+Cell Seeds Background Subtraction: true
+Enable Vesicle Detection: true
+Enable Vesicle Tracking: false
+Vesicle Tracking Max Dist: 1
+Tracking Gaps Close: true
+Tracking Gaps Size: 3
+Tracking Gaps Fill: true
+Cell Membrane Filter Option: eLocalContrast
+Cell Membrane Smooth Filter Width Smallest: 0.530001
+Cell Membrane Merge Automatic Threshold: true
+Cell Membrane Merge Manual Threshold: 0.687012
+Cell Membrane Merge Intensity Automatic Threshold: true
+Cell Membrane Merge Intensity Manual Threshold: 112.728
+Cell Body Detection
+  Source Channel Index: 1
+  Smooth Enable: true
+  Smooth Filter Width: 5.30001
+  Local Contrast Enable: false
+  Local Contrast Filter Width: 1.06
+  Automatic Threshold: true
+  Manual Threshold: 200
+  Enable Tracking: false
+  Filter Width Manual: true
+Nucleus Detection
+  Source Channel Index: 1
+  Smooth Enable: true
+  Smooth Filter Width: 0.265001
+  Local Contrast Enable: false
+  Local Contrast Filter Width: 1.06
+  Automatic Threshold: true
+  Manual Threshold: 200
+  Enable Tracking: false
+  Filter Width Manual: false
+Nuclei Seeds Filter
+  Statistics Filter
+    Lower Threshold Enable: true
+    Lower Threshold Manual: false
+    Lower Threshold Manual Init To Auto: true
+    Lower Threshold Manual Value: 0
+    Upper Threshold Enable: false
+    Upper Threshold Manual: false
+    Upper Threshold Manual Init To Auto: true
+    Upper Threshold Manual Value: 1
+    Select High: true
+    Manual Threshold: false
+    Manual Threshold Value: 0.000
+    Init Manual Threshold To Auto: true
+    Statistics Value Type
+      Name: Quality
+      Unit: 
+      Factors: 0
+Cell Seeds Filter
+  Statistics Filter
+    Lower Threshold Enable: true
+    Lower Threshold Manual: false
+    Lower Threshold Manual Init To Auto: true
+    Lower Threshold Manual Value: 0
+    Upper Threshold Enable: false
+    Upper Threshold Manual: false
+    Upper Threshold Manual Init To Auto: true
+    Upper Threshold Manual Value: 1
+    Select High: true
+    Manual Threshold: false
+    Manual Threshold Value: 0.000
+    Init Manual Threshold To Auto: true
+    Statistics Value Type
+      Name: Quality
+      Unit: 
+      Factors: 0
+Filter
+  Statistics Filter
+    Lower Threshold Enable: true
+    Lower Threshold Manual: true
+    Lower Threshold Manual Init To Auto: false
+    Lower Threshold Manual Value: 500
+    Upper Threshold Enable: true
+    Upper Threshold Manual: true
+    Upper Threshold Manual Init To Auto: false
+    Upper Threshold Manual Value: 11300
+    Select High: true
+    Manual Threshold: true
+    Manual Threshold Value: 500.000
+    Init Manual Threshold To Auto: false
+    Statistics Value Type
+      Name: Cell Volume
+      Unit: um^3
+      Factors: 0
+Track Filter
+Filter Nucleus
+  Statistics Filter
+    Lower Threshold Enable: true
+    Lower Threshold Manual: true
+    Lower Threshold Manual Init To Auto: false
+    Lower Threshold Manual Value: 10
+    Upper Threshold Enable: false
+    Upper Threshold Manual: false
+    Upper Threshold Manual Init To Auto: true
+    Upper Threshold Manual Value: 1
+    Select High: true
+    Manual Threshold: true
+    Manual Threshold Value: 10.000
+    Init Manual Threshold To Auto: false
+    Statistics Value Type
+      Name: Nucleus Number of Voxels
+      Unit: 
+      Factors: 0
+Cell Tracking Algorithm Parameters
+  Object Tracking Algorithm Parameters
+    Track Algo Name: Autoregressive Motion
+    Fill Gap Enable: false
+    Reference Frames Id: 0
+    Object Tracking Algorithm Linear Asignment
+      Max Gap Size: 3
+      Max Distance: -1
+Nucleus Tracking Algorithm Parameters
+  Object Tracking Algorithm Parameters
+    Track Algo Name: Autoregressive Motion
+    Fill Gap Enable: false
+    Reference Frames Id: 0
+    Object Tracking Algorithm Linear Asignment
+      Max Gap Size: 3
+      Max Distance: -1
+Cell Track Filter
+Nucleus And Vesicle Track Filter
+C C Vesicle Creation Parameters0
+  Vesicle Channel Index: 0
+  Vesicle Estimated Diameter: 1.5
+  Vesicle Background Subtraction: true
+  Type Name: Single bacteria
+  Enable Region Growing: true
+  Region Growing Type: eLocalContrast
+  Region Growing Automatic Threshold: false
+  Region Growing Manual Threshold: 200
+  Region Growing Diameter: eDiameterFromVolume
+  Create Region Channel: false
+  Statistics Filter Container
+    Statistics Filter
+      Lower Threshold Enable: true
+      Lower Threshold Manual: true
+      Lower Threshold Manual Init To Auto: false
+      Lower Threshold Manual Value: 200
+      Upper Threshold Enable: false
+      Upper Threshold Manual: false
+      Upper Threshold Manual Init To Auto: false
+      Upper Threshold Manual Value: 1.13042e+06
+      Select High: true
+      Manual Threshold: true
+      Manual Threshold Value: 200.000
+      Init Manual Threshold To Auto: false
+      Statistics Value Type
+        Name: Quality
+        Unit: 
+        Factors: 0
+C C Vesicle Creation Parameters1
+  Vesicle Channel Index: 0
+  Vesicle Estimated Diameter: 5
+  Vesicle Background Subtraction: true
+  Type Name: Aggregates
+  Enable Region Growing: true
+  Region Growing Type: eLocalContrast
+  Region Growing Automatic Threshold: false
+  Region Growing Manual Threshold: 500
+  Region Growing Diameter: eDiameterFromVolume
+  Create Region Channel: false
+  Statistics Filter Container
+    Statistics Filter
+      Lower Threshold Enable: true
+      Lower Threshold Manual: true
+      Lower Threshold Manual Init To Auto: false
+      Lower Threshold Manual Value: 120
+      Upper Threshold Enable: false
+      Upper Threshold Manual: false
+      Upper Threshold Manual Init To Auto: false
+      Upper Threshold Manual Value: 1.13042e+06
+      Select High: true
+      Manual Threshold: true
+      Manual Threshold Value: 120.000
+      Init Manual Threshold To Auto: false
+      Statistics Value Type
+        Name: Quality
+        Unit: 
+        Factors: 0
+C C Vesicle Track Parameters0
+  Object Tracking Algorithm Parameters
+    Track Algo Name: Autoregressive Motion
+    Fill Gap Enable: false
+    Reference Frames Id: 0
+    Object Tracking Algorithm Linear Asignment
+      Max Gap Size: 3
+      Max Distance: -1
+C C Vesicle Track Parameters1
+  Object Tracking Algorithm Parameters
+    Track Algo Name: Autoregressive Motion
+    Fill Gap Enable: false
+    Reference Frames Id: 0
+    Object Tracking Algorithm Linear Asignment
+      Max Gap Size: 3
+      Max Distance: -1

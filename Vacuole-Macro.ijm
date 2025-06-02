@@ -215,6 +215,10 @@ selectWindow("Summary of live_cells");
 
 selectWindow("live_cells");
 	run("Options...", "iterations=40 count=2 black do=Dilate stack");
+
+//To better measure bacterial area, not only vacuoles
+//	run("Options...", "iterations=100 count=2 black do=Dilate stack"); 
+
 	run("Watershed", "stack");
 		run("Clear Results");
 		roiManager("reset")
